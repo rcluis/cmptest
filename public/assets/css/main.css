@@ -1,0 +1,187 @@
+/*
+Display
+Positioning
+Box model
+Colors and Typography
+Other
+*/
+
+i {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/**
+* #.# Layout
+*
+* Description of section, whether or not it has media queries, etc.
+*/
+html{
+    height: 100%;
+    overflow-y: hidden;
+
+}
+body {
+    background-color: #EDEBEC;
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    margin: 0;
+    overflow-y: hidden;
+
+}
+h1,h2,h3 {
+    /*margin: 0;*/
+}
+
+body.active {
+    background-color: #00AAED;
+}
+.page {
+    height: 100%;
+}
+
+#add-friend {
+    cursor: pointer;
+    font-weight: 300;
+    padding: 20px 0;
+    text-align: center;
+}
+#add-friend.dark {
+    background-color: #3B3C3B;
+    color: #C4C5C4;
+}
+
+#add-friend.dark.active {
+    background-color: #C4C5C4;
+    color: #3B3C3B;
+}
+/**
+* #.# Header
+*
+* Description of section, whether or not it has media queries, etc.
+*/
+
+header {
+    background-color: #3B3C3B;
+    color: #ffffff;
+    position: relative;
+}
+
+header .title {
+    font-weight: 600;
+    line-height: 0.7em;
+    text-align: center;
+}
+
+/**
+* #.# Body
+*
+* Description of section, whether or not it has media queries, etc.
+*/
+.content {
+    flex-basis: 100%;
+}
+#back {
+    background-color: transparent;
+    color: #ffffff;
+    z-index: 1;
+    position: absolute;
+}
+#profile-image {
+    height: 260px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+#profile-image .image {
+    display: inline-block;
+    background-image: url("../images/profile-image.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 260px;
+    text-align: center;
+    width: 260px;
+}
+#profile-image .status {
+    background-color: #88E899;
+    box-shadow: 0px 0px 2px #A8A8A8;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 23px 10px;
+    position: absolute;
+    right: 20px;
+    top: 55px;
+}
+.info .text .title {
+    color: #666766;
+    font-weight: 400;
+}
+.info .text .subtitle {
+    color: #E8457D;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.info .description {
+    color: #707170;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.2em;
+}
+
+/**
+* #.# Chat
+*
+* Styles for the view chat
+*/
+#chat-container {
+    flex-basis: 100%;
+    overflow-y: scroll;
+}
+.message-container.sent {
+    flex-direction: row-reverse;
+}
+.message-container .message {
+    max-width: 200px;
+    overflow: auto;
+}
+.message-container.received .message {
+    background-color: #70B9DE;
+    color: #ffffff;
+    margin-right: 10px;
+    margin-left: 70px;
+}
+.message-container.sent .message {
+    background-color: #ffffff;
+    color: #000000;
+    margin-left: 10px;
+    margin-right: 70px;
+}
+.message-container .user-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60px;
+    position: relative;
+    min-width: 60px;
+}
+.message-container.sent .user-image {
+    background-image: url("../images/chat-boy-image.jpeg");
+}
+.message-container.received .user-image {
+    background-image: url("../images/profile-image.jpg");
+}
+.message-container.received .user-image .online {
+    background-color: #86B862;
+    bottom: 0;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: 0;
+}
+#send-message {
+    border: 0;
+}
