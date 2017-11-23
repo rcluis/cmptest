@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600" rel="stylesheet">
+    <link href="./assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/css/main.css" rel="stylesheet">
+    <script src="./assets/js/index.js"></script>
+</head>
+<body>
+    <div class="page d-flex flex-column">
+        <header class="py-3 d-flex align-items-start">
+            <?php if($back): ?>
+                <button id="back" class="pl-3 border-0" onclick="location.href='profile'">
+                    <i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i>
+                </button>
+            <?php endif; ?>
+            <h3 class="title w-100">Sophie</h3>
+        </header>
+        <main class="content px-3 pb-2 pt-5 d-flex flex-column">
+            <?php echo $content; ?>
+        </main>
+    </div>
+</body>
+</html>
